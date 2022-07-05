@@ -65,10 +65,10 @@ class SRPDemo
         System.out.println(j);
 
         Persistence p = new Persistence();
-        String filename = "c:\\temp\\journal.txt";
+        String filename = "c:\\journal.txt";
         p.saveToFile(j, filename, true);
 
         // windows!
-        Runtime.getRuntime().exec("notepad.exe " + filename);
+        Runtime.getRuntime().exec(new String[] {"notepad.exe", filename});
     }
 }
