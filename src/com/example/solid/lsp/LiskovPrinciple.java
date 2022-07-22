@@ -82,16 +82,16 @@ class RectangleFactory
 class LSPDemo
 {
     // maybe conform to ++
-    static void useIt(Rectangle r)
+    static void useIt(Rectangle rectangle)
     {
-        int width = r.getWidth();
-        r.setHeight(10);
-        System.out.println("Expected area of " + (width*10) + ", got " + r.getArea());
+        int width = rectangle.getWidth();
+        rectangle.setHeight(10);
+        System.out.println("Expected area of " + (width*10) + ", got " + rectangle.getArea());
     }
 
     public static void main(String[] args) {
-        Rectangle rc = new Rectangle(2, 3);
-        useIt(rc);
+        Rectangle rectangle = new Rectangle(2, 3);
+        useIt(rectangle);
 
         Rectangle sq = new Square();
         sq.setHeight(5);

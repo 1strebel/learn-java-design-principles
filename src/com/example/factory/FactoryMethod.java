@@ -46,8 +46,7 @@ class Point
         return new Point(x,y);
     }
 
-    public static Point newPolarPoint(double rho, double theta)
-    {
+    public static Point newPolarPoint(double rho, double theta) {
         return new Point(rho*Math.cos(theta), rho*Math.sin(theta));
     }
 
@@ -56,6 +55,10 @@ class Point
         public static Point newCartesianPoint(double x, double y)
         {
             return new Point(x,y);
+        }
+        public static Point newPolarPoint(double rho, double theta)
+        {
+            return new Point(rho*Math.cos(theta), rho*Math.sin(theta));
         }
     }
 }

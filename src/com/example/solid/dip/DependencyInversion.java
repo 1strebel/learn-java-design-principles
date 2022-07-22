@@ -38,6 +38,7 @@ interface RelationshipBrowser
 
 class Relationships implements RelationshipBrowser
 {
+    @Override
     public List<Person> findAllChildrenOf(String name) {
 
         return relations.stream()
@@ -64,6 +65,7 @@ class Relationships implements RelationshipBrowser
 
 class Research
 {
+    //violation
     public Research(Relationships relationships)
     {
         // high-level: find all of john's children
