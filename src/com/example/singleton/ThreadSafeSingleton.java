@@ -8,6 +8,7 @@ public class ThreadSafeSingleton {
         System.out.println("initializing");
     }
 
+    //double check locking
     public static ThreadSafeSingleton getInstance() {
         if (instance == null) {
             synchronized (ThreadSafeSingleton.class) {
