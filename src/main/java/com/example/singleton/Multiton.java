@@ -1,6 +1,7 @@
 package com.example.singleton;
 
 import java.util.HashMap;
+import java.util.Map;
 
 enum Subsystem
 {
@@ -16,20 +17,18 @@ class Printer
     private Printer()
     {
         instanceCount++;
-        System.out.println("A total of " +
-                instanceCount + " instances created so far.");
+        System.out.println("A total of " + instanceCount + " instances created so far.");
     }
 
-    private static HashMap<Subsystem, Printer>
-            instances = new HashMap<>();
+    private static Map<Subsystem, Printer> instances = new HashMap<>();
 
-    public static Printer get(Subsystem ss)
+    public static Printer get(Subsystem subsystem)
     {
-        if (instances.containsKey(ss))
-            return instances.get(ss);
-
+        if (instances.containsKey(subsystem)) {
+            return instances.get(subsystem);
+        }
         Printer instance = new Printer();
-        instances.put(ss, instance);
+        instances.put(subsystem, instance);
         return instance;
     }
 }
