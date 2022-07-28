@@ -1,4 +1,4 @@
-package com.example.patterns.builder.facade;
+package com.example.builder.facade;
 
 class Person
 {

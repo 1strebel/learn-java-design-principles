@@ -1,4 +1,4 @@
-package com.example.patterns.builder.recursive;
+package com.example.builder.recursive;
 
 // builder inheritance with recursive generics
 
